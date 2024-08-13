@@ -1,0 +1,89 @@
+/* Position and size the calculator */
+.calculator {
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Subtle border to define the calculator structure */
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2), 0px 10px 20px rgba(0, 0, 0, 0.1); /* Floating shadow effect */
+    border-radius: 20px;
+    position: absolute; /* Fixed position for viewport consistency */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to account for its own size */
+    width: 320px; /* Fixed width to group buttons */
+    background-color: #FFFFFF; /* White background */
+    padding: 30px; /* Increased padding for better spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+/* Grid for button layout */
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 70px); /* Fixed width for each button column */
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+/* Style buttons */
+.button, .operator, .clear, .equal-sign {
+    height: 60px;
+    width: 70px; /* Fixed width to keep buttons uniform */
+    background-color: #E5E7EB; /* Soft gray for buttons */
+    border-radius: 8px;
+    border: 1px solid #D1D5DB; /* Light gray border */
+    font-size: 1.5rem;
+    color: #1F2937; /* Dark gray text */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+    text-align: center;
+}
+
+/* Hover effects for buttons */
+.button:hover {
+    background-color: #D1D5DB; /* Darker gray on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+.operator {
+    background-color: #6366F1; /* Distinct indigo for operator buttons */
+    color: #FFFFFF;
+    border: 1px solid #4F46E5; /* Slightly darker border for contrast */
+}
+
+.operator:hover {
+    background-color: #4F46E5; /* Darker indigo on hover */
+    box-shadow: 0px 4px 10px rgba(79, 70, 229, 0.3); /* Indigo shadow on hover */
+}
+
+.clear {
+    background-color: #EF4444; /* Bright red for clear button */
+    color: #FFFFFF;
+    border: 1px solid #DC2626; /* Darker red border */
+}
+
+.clear:hover {
+    background-color: #DC2626; /* Darker red on hover */
+    box-shadow: 0px 4px 10px rgba(220, 38, 38, 0.3); /* Red shadow on hover */
+}
+
+.equal-sign {
+    background-color: #10B981; /* Teal green for the equal sign button */
+    color: #FFFFFF;
+    border: 1px solid #059669; /* Darker teal border */
+}
+
+.equal-sign:hover {
+    background-color: #059669; /* Darker teal on hover */
+    box-shadow: 0px 4px 10px rgba(5, 150, 105, 0.3); /* Teal shadow on hover */
+}
+
+/* Container for the calculator */
+.container {
+    background-color: #F9FAFB; /* Slightly off-white for contrast */
+    padding: 20px;
+    border-radius: 20px; /* Rounded corners for the entire calculator */
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2), 0px 10px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for a floating effect */
+    width: 320px; /* Fixed width for the container */
+    height: auto; /* Adjust height based on content */
+    margin: 0; /* Remove margin to use fixed positioning */
+    outline: 3px solid rgba(0, 0, 0, 0.05); /* Subtle outer line to emphasize the structure */
+}
